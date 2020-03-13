@@ -18,7 +18,7 @@ public class SetCmd extends Command {
             Messages.PLAYERCMD.send(sender);
             return false;
         }
-        var player = (Player)sender;
+        Player player = (Player)sender;
 
         if(args.length == 0){
             Messages.PARAM_MISS.send(sender, "//set <blockId>");
@@ -30,7 +30,7 @@ public class SetCmd extends Command {
             return false;
         }
 
-        var sel = api.getSelection(player.getId());
+        Cuboid sel = api.getSelection(player.getId());
         if(sel == null || !sel.isComplete()) {
             Messages.SELECTION_INVALID.send(sender);
             return false;

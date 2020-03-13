@@ -23,10 +23,10 @@ public class WandCmd extends Command {
             return false;
         }
 
-        var player = (Player)sender;
-        var wand = new Item(ItemID.WOODEN_AXE);
+        Player player = (Player)sender;
+        Item wand = new Item(ItemID.WOODEN_AXE);
         wand.setCustomName("WorldEdit Wand");
-        var c = new CompoundTag();
+        CompoundTag c = new CompoundTag();
         c.putBoolean("wand", true);
         wand.setCustomBlockData(c);
         player.getInventory().addItem(wand);

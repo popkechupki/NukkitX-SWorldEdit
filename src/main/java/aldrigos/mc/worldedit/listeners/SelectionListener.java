@@ -34,8 +34,8 @@ public class SelectionListener implements Listener {
         if(!api.isWand(e.getItem()))
             return;
 
-        var player = e.getPlayer();
-        var pos = e.getBlock().getLocation();
+        Player player = e.getPlayer();
+        Location pos = e.getBlock().getLocation();
 
         switch (e.getAction()){
             case RIGHT_CLICK_BLOCK:

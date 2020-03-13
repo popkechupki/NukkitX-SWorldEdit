@@ -18,8 +18,8 @@ public class ShiftCmd extends Command {
             Messages.PLAYERCMD.send(sender);
             return false;
         }
-        var player = (Player)sender;
-        var sel = api.getSelection(player.getId());
+        Player player = (Player)sender;
+        Cuboid sel = api.getSelection(player.getId());
 
         if(args.length < 2){
             Messages.PARAM_MISS.send(player, "//shift <num> <up|down|north|south|east|west>");

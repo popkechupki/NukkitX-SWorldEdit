@@ -3,6 +3,7 @@ package aldrigos.mc.worldedit;
 import aldrigos.mc.worldedit.commands.*;
 import aldrigos.mc.worldedit.listeners.*;
 
+import cn.nukkit.command.SimpleCommandMap;
 import cn.nukkit.plugin.PluginBase;
 
 import java.util.Map;
@@ -27,7 +28,7 @@ public class WorldEditPlugin extends PluginBase {
 
     @Override
     public void onEnable(){
-        var cm = this.getServer().getCommandMap();
+        SimpleCommandMap  cm = this.getServer().getCommandMap();
         cm.register("/wand", new WandCmd());
         cm.register("/set", new SetCmd(this));
         cm.register("/expand", new ExpandCmd(this));
